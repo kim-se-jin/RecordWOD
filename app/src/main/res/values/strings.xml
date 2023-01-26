@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RecordWOD</string>
+
+<!-- 로그인-->
+    <string name="text_loginMain">Record WOD</string>
+    <string name="text_crossfit">CrossFit</string>
+    <string name="text_kakaologin">Kakao 로 로그인</string>
+    <string name="text_googlelogin">Google 로 로그인</string>
+    <string name="text_loginbtm">What is CrossFit ? </string>
+
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.LoginFragment">
+
+    <LinearLayout
+        android:id="@+id/MainLogoLi"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginBottom="@dimen/dimen_16"
+        android:layout_marginLeft="@dimen/dimen_32"
+        android:layout_marginRight="@dimen/dimen_32"
+
+        android:background="@drawable/main_lifting_icon"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:text="@string/text_loginMain"
+            style="@style/LoginMainTextStyle"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:fontFamily="@font/notosans_bold"
+            android:text="@string/text_crossfit"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/KakaoLoginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        style="@style/KakaoLoginTextStyle"
+        android:text="@string/text_kakaologin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MainLogoLi" />
+
+    <Button
+        android:id="@+id/GgLoginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        style="@style/GoogleLoginTextStyle"
+        android:text="@string/text_googlelogin"
+        app:layout_constraintTop_toBottomOf="@id/KakaoLoginBtn" />
+
+    <TextView
+        style="@style/LoginTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/text_loginbtm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GgLoginBtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
