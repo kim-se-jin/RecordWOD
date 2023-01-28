@@ -28,6 +28,7 @@ android:fitsSystemWindows="true">
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:text="@string/text_loginMain"
+        android:singleLine="true"
         style="@style/LoginMainTextStyle"/>
 
     <TextView
@@ -35,6 +36,7 @@ android:fitsSystemWindows="true">
         android:layout_height="100dp"
         android:fontFamily="@font/notosans_bold"
         android:text="@string/text_crossfit"
+        android:singleLine="true"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
         android:textColor="@color/black" />
