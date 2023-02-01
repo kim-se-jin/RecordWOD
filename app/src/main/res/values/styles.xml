@@ -36,7 +36,10 @@
     </style>
 
     <style name="KakaoLoginTextStyle" parent="LoginTextStyle">
-        <item name="android:backgroundTint">@color/kakao_login </item>
+        <item name="android:layout_marginStart">@dimen/dimen_16</item>
+        <item name="android:layout_marginTop">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_16</item>
     </style>
 
     <style name="GoogleLoginTextStyle" parent="LoginTextStyle">
@@ -53,16 +56,41 @@
         <item name="android:layout_marginTop">@dimen/dimen_4</item>
         <item name="android:layout_marginEnd">@dimen/dimen_4</item>
         <item name="android:layout_marginBottom">@dimen/dimen_4</item>
-    </style>
-
-    <style name="RecordTitleStyle" parent="MainStyle" >
-        <item name="android:fontFamily">@font/notosans</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">20sp</item>
-        <item name="fontFamily">@font/notosans_bold</item>
     </style>
 
+    <style name="RecordTitleStyle">
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/notosans_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="MainEditTextStyle" parent="MainStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/notosans</item>
+        <item name="android:layout_marginStart">@dimen/dimen_8</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_8</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_8</item>
+        <item name="android:layout_marginTop">@dimen/dimen_8</item>
+    </style>
+
+    <style name="wodTextStyle" parent="MainEditTextStyle">
+        <item name="android:gravity">start</item>
+
+    </style>
+
+    <style name="MemoTextStyle" parent="MainEditTextStyle">
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="MainAllStyle" >
+        <item name="android:layout_marginStart">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+
+    </style>
 
 
 </resources>

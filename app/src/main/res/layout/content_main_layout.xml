@@ -6,7 +6,7 @@
     android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/gray"
+    android:background="@drawable/main_wod_shape"
     android:fillViewport="true"
 
     app:layout_constraintBottom_toBottomOf="parent"
@@ -22,51 +22,95 @@
 
         <View
             android:id="@+id/header"
+            style="@style/MainAllStyle"
+
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--wod 기록할 부분 view -->
         <View
             android:id="@+id/background_view"
+            style="@style/MainAllStyle"
             android:layout_width="0dp"
-            android:layout_height="170dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_height="200dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/header" />
 
-        <View
-            android:id="@+id/designer_background"
+        <!--맨 상단 WOD-->
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Workout Of the Day"
+            android:theme="@style/RecordTitleStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/header"
+            app:layout_constraintEnd_toEndOf="@+id/header"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toTopOf="@+id/header" />
+
+        <!--WOD 입력하는 부분-->
+        <TextView
+            android:id="@+id/main_wodTV"
+            style="@style/wodTextStyle"
+
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:text="3sets \n 3:00 ON/ 3:00 OFF \n 70 Duble under \n 10 Burpee \n Max reps Squat snatch  "
+            app:layout_constraintBottom_toBottomOf="@+id/background_view"
+            app:layout_constraintEnd_toEndOf="@+id/background_view"
+            app:layout_constraintStart_toEndOf="@+id/leftLine"
+
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <View
+            android:id="@+id/main_record_view"
+            style="@style/MainAllStyle"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@drawable/main_record_shape"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/background_view" />
 
-        <TextView
-            android:id="@+id/icon"
+        <ImageView
+            android:id="@+id/timeIcon"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintBottom_toBottomOf="@+id/background_view"
-            app:layout_constraintEnd_toEndOf="@+id/background_view"
-            app:layout_constraintStart_toEndOf="@+id/leftLine"
-            app:layout_constraintTop_toBottomOf="@+id/theme_name"
-            android:text="여기를 눌러 추가하세용" />
+            android:layout_marginLeft="@dimen/dimen_48"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_marginRight="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_8"
+
+            android:background="@drawable/recordclock"
+            app:layout_constraintBottom_toBottomOf="@id/main_record_view"
+            app:layout_constraintEnd_toStartOf="@id/main_RecordTV"
+            app:layout_constraintStart_toStartOf="@id/main_record_view"
+            app:layout_constraintTop_toTopOf="@id/main_record_view" />
+
+        <!--Record 입력하는 부분-->
+        <TextView
+            android:id="@+id/main_RecordTV"
+            style="@style/RecordTitleStyle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            android:text="Record : 17 : 30 "
+            app:layout_constraintBottom_toBottomOf="@+id/main_record_view"
+            app:layout_constraintEnd_toEndOf="@+id/main_record_view"
+            app:layout_constraintStart_toStartOf="@id/timeIcon"
+            app:layout_constraintTop_toTopOf="@id/main_record_view" />
 
         <View
             android:id="@+id/leftLine"
@@ -76,46 +120,44 @@
             android:background="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/background_view"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/header" />
+            app:layout_constraintTop_toTopOf="@+id/main_wodTV" />
 
-        <TextView
-            android:id="@+id/theme_name"
+        <!--Memo 입력하는 부분-->
+
+        <View
+            android:id="@+id/main_memo_view"
+            style="@style/MainAllStyle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="viewStart"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/leftLine"
-            app:layout_constraintTop_toBottomOf="@+id/header"
-            tools:text="January 19th, 2018" />
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/dimen_8"
 
-        <TextView
-            android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WOD"
-            android:theme="@style/RecordTitleStyle"
-            app:layout_constraintBottom_toBottomOf="@+id/header"
-            app:layout_constraintEnd_toEndOf="@+id/header"
-            app:layout_constraintStart_toStartOf="@+id/header"
-            app:layout_constraintTop_toTopOf="@+id/header" />
-
-
-        <TextView
-            android:id="@+id/Record"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            android:background="@drawable/main_memo_shape"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/background_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_record_view" />
+
+        <TextView
+            android:id="@+id/main_MemoTitle"
             style="@style/RecordTitleStyle"
-            tools:text="Record : 17 : 30 " />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="8dp"
+            android:text="기록하기"
+            app:layout_constraintStart_toStartOf="@+id/main_memo_view"
+            app:layout_constraintTop_toTopOf="@+id/main_memo_view" />
+
+        <TextView
+            android:id="@+id/main_memoTV"
+            style="@style/MemoTextStyle"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:text="오늘 더블언더가 너무 잘됐다. 거의 50개 언브로큰으로 한 듯 !! 그리고 버피는 언제나 악마의 운동이었구요, 스퀏 스내치는 허허 너무 힘들어요"
+
+            app:layout_constraintEnd_toEndOf="@+id/main_memo_view"
+            app:layout_constraintStart_toStartOf="@+id/main_memo_view"
+            app:layout_constraintTop_toBottomOf="@+id/main_MemoTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

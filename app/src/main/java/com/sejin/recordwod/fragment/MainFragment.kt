@@ -1,18 +1,15 @@
 package com.sejin.recordwod.fragment
 
-import android.graphics.Color
-import android.graphics.Typeface
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import android.text.style.ForegroundColorSpan
-import android.text.style.RelativeSizeSpan
-import android.text.style.StyleSpan
-import androidx.fragment.app.Fragment
+
+import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.prolificinteractive.materialcalendarview.*
-import com.sejin.recordwod.R
 import com.sejin.recordwod.base.BaseFragment
 import com.sejin.recordwod.calendar.EventDecorator
 import com.sejin.recordwod.calendar.SelectDecorator
@@ -28,6 +25,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     private lateinit var viewModel: MainViewModel
     lateinit var calendar: MaterialCalendarView
+
+
 
     // 뷰가 생성될 때 호출
     override fun initView() {

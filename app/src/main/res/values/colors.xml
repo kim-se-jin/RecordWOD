@@ -28,6 +28,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="kakao_login">#FFC107</color>
     <color name="google_login">#C5C3C0</color>
-    <color name="gray">#CFCFCE</color>
+    <color name="gray">#F3F3F1</color>
+    <color name="record_color">#76ACE6</color>
+
 
 </resources>
