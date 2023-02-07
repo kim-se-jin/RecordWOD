@@ -9,4 +9,7 @@
     <string name="text_loginbtm">What is CrossFit ? </string>
 
     <string name="kakao_app_key">87a64fddbb099cc0e34d9fb1f3a12e74</string>
+<!--    <string name="web_client_id">AIzaSyDjK1lsbnPcyC0jJSEtb3mQr0iKor4IF60</string>-->
+    <string name="web_client_id">922642760159-7h4ip0bjgqr9i24r03335rsqjochlbvm.apps.googleusercontent.com</string>
+
 </resources>

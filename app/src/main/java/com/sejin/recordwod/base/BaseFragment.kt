@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
@@ -50,5 +51,19 @@ abstract class BaseFragment<VB : ViewBinding> :
 //    }
 
     protected abstract fun getViewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
+
+    private var progressBar: ProgressBar? = null
+
+    fun setProgressBar(bar: ProgressBar) {
+        progressBar = bar
+    }
+
+    fun showProgressBar() {
+        progressBar?.visibility = View.VISIBLE
+    }
+
+    fun hideProgressBar() {
+        progressBar?.visibility = View.INVISIBLE
+    }
 
 }
