@@ -255,7 +255,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             Log.e(TAG, "Couldn't start Sign In: ${e.localizedMessage}")
         }
     }
-
+//test
     private fun signOut() {
         // Firebase sign out
         auth.signOut()
