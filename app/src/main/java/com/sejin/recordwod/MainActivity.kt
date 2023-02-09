@@ -23,7 +23,9 @@ import com.kakao.sdk.user.UserApiClient
 import android.content.Intent
 import android.widget.Toast
 import com.kakao.sdk.auth.model.OAuthToken
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var navController: NavController

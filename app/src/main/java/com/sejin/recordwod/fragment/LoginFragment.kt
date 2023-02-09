@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
@@ -46,6 +47,8 @@ import com.sejin.recordwod.databinding.FragmentLoginBinding
 import com.sejin.recordwod.view.viewmodel.LoginViewModel
 
 class LoginFragment : BaseFragment<FragmentLoginBinding>() {
+
+    private val loginViewModel : LoginViewModel by viewModels()
 
     companion object {
         fun newInstance() = LoginFragment()
@@ -86,7 +89,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
         // 버튼 클릭했을 때 로그인
         with(binding) {
-//            KakaoLoginBtn.setOnClickListener {}
+            KakaoLoginBtn.setOnClickListener {  }
 
         }
 

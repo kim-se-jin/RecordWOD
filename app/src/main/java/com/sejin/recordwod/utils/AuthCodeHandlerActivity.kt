@@ -1,4 +1,4 @@
-package com.sejin.recordwod
+package com.sejin.recordwod.utils
 
 import android.content.ContentValues.TAG
 import android.os.Bundle

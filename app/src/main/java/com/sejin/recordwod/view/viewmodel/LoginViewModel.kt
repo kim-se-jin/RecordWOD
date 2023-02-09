@@ -4,6 +4,8 @@ import android.app.Application
 import android.content.ContentValues
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
@@ -12,6 +14,17 @@ import com.kakao.sdk.user.UserApiClient
 
 class LoginViewModel(application: Application) : AndroidViewModel(application) {
 //    class LoginViewModel : BaseViewModel<LoginState>(initialState = LoginState()) {  {
+
+    // 데이터를 캡슐화하여 외부(뷰)에서 접근할 수 없고
+    // 외부 접근 프로퍼티는 immutable 타입으로 제한해 변경할 수 없도록 한당
+
+    private val _data = MutableLiveData<String>("")
+    val data : LiveData<String> = _data
+
+//    fun getData():{
+//        _data.value =
+//    }
+
 
     private val context = getApplication<Application>().applicationContext
     val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
