@@ -1,4 +1,4 @@
-package com.sejin.recordwod.data.database
+package com.sejin.recordwod.model
 
 open class WodInfo {
     var wodId : String = ""

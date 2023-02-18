@@ -1,4 +1,4 @@
-package com.sejin.recordwod.data.database
+package com.sejin.recordwod.model
 
 open class UserInfo {
     var userId: String = ""
@@ -17,4 +17,18 @@ open class UserInfo {
         userBox = _userBox
     }
 
+
+    fun CreateUser(
+        userId: String,
+        name: String,
+        BBweight: Boolean,
+        DBweight: Boolean,
+        KBweight: Boolean,
+        userBox: String
+    ) {
+        val newUser = UserInfo(userId, name, BBweight, DBweight, KBweight, userBox)
+//        WriteDataBase.child("users").child(userId).setValue(newUser)
+    }
+
 }
+
