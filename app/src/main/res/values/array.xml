@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="programName">
+        <item>AMREP</item>
+        <item>For Time </item>
+        <item>Team of 2</item>
+        <item>EMOM</item>
+        <item>TABATA</item>
+
+    </string-array>
+</resources>

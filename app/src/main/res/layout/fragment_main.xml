@@ -19,14 +19,14 @@
             app:mcv_selectionColor="#E68278"
             app:mcv_showOtherDates="all"/>
 
-<!--    <TextView-->
-<!--        android:id="@+id/test"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="여기를 클릭하여 와드를 추가하세용"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/updateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="여기를 클릭하여 와드를 추가하세용"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/recordLayout"

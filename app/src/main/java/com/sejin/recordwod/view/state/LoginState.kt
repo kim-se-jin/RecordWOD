@@ -9,4 +9,3 @@ data class LoginState(
     val isValidUsername: Boolean? = null,
     val isValidPassword: Boolean? = null
 ) : State
-

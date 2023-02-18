@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services' // for firebase
     id 'kotlin-kapt' // room
+    id 'com.google.dagger.hilt.android' // hilt
 }
 
 android {
@@ -48,6 +49,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.1.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'// 데이터베이스
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
@@ -77,5 +80,17 @@ dependencies {
     // Kakao 로그인
     implementation "com.kakao.sdk:v2-user:2.12.1" // 카카오 로그인
 
+    // hilt
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
 
+    // Hilt + JetPack
+    implementation "androidx.hilt:hilt-navigation-fragment:1.0.0"
+
+
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
 }
